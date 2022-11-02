@@ -1,0 +1,107 @@
+<div class="header">
+    <h3 class="mat-dialog-title" mat-dialog-title>Profile</h3>
+</div>
+
+<div class="container">
+    <form [formGroup]="userDetailsForm">
+    <table>
+        <caption></caption>
+        <div formGroupName="details">
+            <tr>
+                <th>  
+                </th>
+                <th>  
+                </th>
+            </tr>
+            <tr>
+                <td class="head">Username</td>
+                <td class="data"><input type="text" value="{{details.username}}" formControlName="username" [readonly]="isEditable"></td>
+            </tr>
+            <tr>
+                <td class="head">First Name</td>
+                <td class="data"><input type="text" value="{{details.firstName}}" formControlName="firstName" [readonly]="isEditable"></td>
+            </tr>
+            <tr>
+                <td class="head">Last Name</td>
+                <td class="data"><input type="text" value="{{details.lastName}}" formControlName="lastName" [readonly]="isEditable"></td>
+            </tr>
+            <tr>
+                <td class="head">Primary Email</td>
+                
+                <td class="data"><input type="text" value="{{details.primaryEmailId}}" formControlName="primaryEmailId" size="25" [readonly]="isEditable"></td>
+            </tr>
+            <tr>
+                <td class="head">Secondary Email</td>
+                <td class="data"><input type="text" value="{{details.secondaryEmailId}}" formControlName="secondaryEmailId" [readonly]="isEditable"></td>
+            </tr>
+            <tr>
+                <td class="head">Designation</td>
+                <td class="data"><input type="text" value="{{details.designation}}" formControlName="designation" [readonly]="isEditable"></td>
+            </tr>
+        </div>
+            <div formGroupName="contacts">
+            <h2>Contact Details</h2>
+            <tr>
+                <td class="head">Country Code</td>
+                <td class="data"><input type="text" value="{{contact.countryCode}}" formControlName="countryCode" [readonly]="isEditable"></td>
+            </tr>
+            <tr>
+                <td class="head">Primary Mobile</td>
+                <td class="data"><input type="text" value="{{contact.primaryMobileNumber}}" formControlName="primaryMobileNumber" [readonly]="isEditable"></td>
+            </tr>
+            <tr>
+                <td class="head">Secondary Mobile</td>
+                <td class="data"><input type="text" value="{{contact.secondaryMobileNumber}}" formControlName="secondaryMobileNumber" [readonly]="isEditable"></td>
+            </tr>
+        </div>
+        <div formGroupName="address">
+            <h2>Address Details</h2>
+            <tr>
+                <td class="head">Door No</td>
+                <td class="data"><input type="text" value="{{address.pDoorNo}}" formControlName="pDoorNo" [readonly]="isEditable"></td>
+            </tr>
+            <tr>
+                <td class="head">Street Name</td>
+                <td class="data"><input type="text" value="{{address.pStreetName}}" formControlName="pStreetName" [readonly]="isEditable"></td>
+            </tr>
+            <tr>
+                <td class="head">City</td>
+                <td class="data"><input type="text" value="{{address.pCity}}" formControlName="pCity" [readonly]="isEditable"></td>
+            </tr>
+            <tr>
+                <td class="head">PinCode</td>
+                <td class="data"><input type="text" value="{{address.pPinCode}}" formControlName="pPinCode" [readonly]="isEditable"></td>
+            </tr>
+            <tr>
+                <td class="head">State</td>
+                <td class="data"><input type="text" value="{{address.pState}}" formControlName="pState" [readonly]="isEditable"></td>
+            </tr>
+            <tr>
+                <td class="head">Country</td>
+                <td class="data"><input type="text" value="{{address.pCountry}}" formControlName="pCountry"  [readonly]="isEditable"></td>
+            </tr>
+        </div>
+            <h2>Branch Details</h2>
+            <div formGroupName="departments">
+            <tr>
+                <td class="head">Department Name</td>
+                <td class="data"><input type="text" value="{{department.departmentName}}" formControlName="departmentName" [readonly]="isEditable"></td>
+            </tr>
+            <tr>
+                <td class="head">Department Details</td>
+                <td class="data"><input type="text" value="{{department.details}}" formControlName="details"  [readonly]="isEditable"></td>
+            </tr>
+        </div>
+    </table>
+</form>
+</div>
+<div class="updateBtn" *ngIf="isVisibleUpdate">
+    <input type="button" (click)="update()" value="Update Profile">
+</div>
+
+<div class="footer">
+    <mat-dialog-actions class="mat-dialog-actions">
+        <button class="mat-dialog-edit" mat-button (click)="updateProfileOpen()"><mat-icon>edit</mat-icon></button>
+        <button class="mat-dialog-close" mat-button mat-dialog-close><mat-icon>close</mat-icon></button>
+    </mat-dialog-actions>
+</div>

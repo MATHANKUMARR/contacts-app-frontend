@@ -1,0 +1,73 @@
+table,tr,td{
+    width: 100%;
+    /* border: 0.5px solid blue; */
+}
+h2{
+    color: rgb(255, 106, 0);
+}
+
+.head{
+    font-weight: bold;
+    margin-right: 10px;
+    width: 40%;
+    padding-top: 7px;
+}
+
+.mat-dialog-title{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.mat-dialog-actions{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.hr{
+    height: 1px;
+  background: black;
+  width: 100%;
+}
+.data{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.header{
+background: rgb(176, 217, 236);
+}
+
+.footer{
+background: rgb(241, 237, 229);
+}
+
+.mat-dialog-edit{
+    background: orange;
+    color: white;
+}
+
+.mat-dialog-close{
+    background: red;
+    color: white;
+}
+
+.updateBtn{
+    padding-bottom: 3px;
+}
+
+.updateBtn input{
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: none;
+    box-shadow: 0 0 0 0.25;
+    background: rgb(71, 126, 198);
+    cursor: pointer;
+}
+
+.container input{
+    border: none;
+}

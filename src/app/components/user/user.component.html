@@ -1,0 +1,108 @@
+<div class="body">
+    <h3 mat-dialog-title class="mat-dialog-title">{{details.firstName +" "+ details.lastName}} 's profile</h3>
+
+    <div id="box3">
+        <div id="box4">
+            <table>
+                <caption></caption>
+                <h3>Primary Details</h3>
+                <tr>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td class="head">Username :</td>
+                    <td class="data">{{details.username}}</td>
+                </tr>
+                <tr>
+                    <td class="head">First Name :</td>
+                    <td class="data">{{details.firstName}}</td>
+                </tr>
+                <tr>
+                    <td class="head">Last Name :</td>
+                    <td class="data">{{details.lastName}}</td>
+                </tr>
+                <tr>
+                    <td class="head">Email (primary) :</td>
+                    <td class="data">{{details.primaryEmailId}}</td>
+                </tr>
+                <tr>
+                    <td class="head">Email (secondary) :</td>
+                    <td class="data">{{details.secondaryEmailId}}</td>
+                </tr>
+                <tr>
+                    <td class="head">Designation :</td>
+                    <td class="data">{{details.designation}}</td>
+                </tr>
+                 <h3>Address</h3>
+                <tr>
+                    <td class="head">Door No :</td>
+                    <td class="data">{{address.pDoorNo}}</td>
+                </tr>
+                <tr>
+                    <td class="head">Street :</td>
+                    <td class="data">{{address.pStreetName}}</td>
+                </tr>
+                <tr>
+                    <td class="head">City :</td>
+                    <td class="data">{{address.pCity}}</td>
+                </tr>
+                <tr>
+                    <td class="head">State :</td>
+                    <td class="data">{{address.pState}}</td>
+                </tr>
+                <tr>
+                    <td class="head">Country :</td>
+                    <td class="data">{{address.pCountry}}</td>
+                </tr>
+                <tr>
+                    <td class="head">PIN code :</td>
+                    <td class="data">{{address.pPinCode}}</td>
+                </tr>
+            </table>
+        </div>
+        <div class="middle-column">
+            <div id="box5">
+                <h3>Contact</h3>
+                <table>
+                    <caption></caption>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <td class="head">Mobile (primary)</td>
+                        <td class="data">{{contact.countryCode}} {{contact.primaryMobileNumber}}</td>
+                    </tr>
+                    <tr>
+                        <td class="head">Mobile (secondary)</td>
+                        <td class="data">{{contact.countryCode}} {{contact.secondaryMobileNumber}}</td>
+                    </tr>
+                </table>
+            </div>
+            <div id="box6">
+                <h3>Department</h3>
+                <table>
+                    <caption></caption>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <td class="head">Department Name</td>
+                        <td class="data">{{department.departmentName}}</td>
+                    </tr>
+                    <tr>
+                        <td class="head">Department Details</td>
+                        <td class="data">{{department.details}}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <mat-dialog-actions class="mat-dialog-actions">
+        <button class="mat-dialog-close" mat-button mat-dialog-close><mat-icon>close</mat-icon></button>
+    </mat-dialog-actions>
+
+</div>

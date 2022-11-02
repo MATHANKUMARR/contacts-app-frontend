@@ -1,0 +1,21 @@
+<div class="body">
+    <img src="https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/ngtdnfed3au9ifom5w5b" alt="Girl in a jacket" width="100" height="40">
+    <div class="container">
+        <div class="formBx">
+            <div class="form signupForm">
+                <form [formGroup]="registerForm" (ngSubmit)="onSubmitRegister()">
+                    <h3>Sign Up</h3>
+                    <input type="text" placeholder="Username" formControlName="username">
+                    <input type="text" placeholder="First Name" formControlName="firstName">
+                    <input type="text" placeholder="Last Name" formControlName="lastName">
+                    <input type="text" placeholder="Email Address" formControlName="primaryEmailId">
+                    <input type="text" placeholder="Designation" formControlName="designation">
+                    <input type="password" placeholder="Password" formControlName="password">
+                    <input type="password" placeholder="Confirm Password" formControlName="confirmPasskey">
+                    <input type="submit" value="Register">
+                    Already have an Account? <input type="button" (click)="gotoLogin()" value="Sign in">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
